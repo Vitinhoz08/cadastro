@@ -1,0 +1,29 @@
+body {
+    background-color: rgb(48, 48, 48);
+}
+
+#card {
+    background-color: aliceblue;
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#dados {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-left: 100px;
+}
+
+input {
+    padding: 20px;
+    border-radius: 5px;
+    width: 70%;
+}
+
+#botão {
+    background-color: rgb(8, 244, 0);
+    color: beige;
+    font-size: x-large;
+}
