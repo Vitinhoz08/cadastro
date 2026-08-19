@@ -1,37 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="index.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro Inteligente</title>
+  <link rel="stylesheet" href="index.css">
 </head>
-
 <body>
-    <div id="card">
-        <div>
-            <h1>Cadastro</h1>
-            <h4>Crie sua conta escolar</h4>
-        </div>
-        <div id="dados">
-            <label for="">E-mail</label>
-            <input type="text" placeholder="Digite seu email">
-        </div>
-        <div id="dados">
-            <label for="">Senha</label>
-            <input type="password" placeholder="Digite sua senha">
-        </div>
 
-        <div>
-            <p>❌Pelo menos 8 caracteres</p>
-            <p>❌Uma letra maiuscúla</p>
-            <p>❌Um número</p>
-        </div>
-        <div>
-            <input type="submit" value="Cadastro" id="botão">
-        </div>
-    </div>
+  <div class="card-cadastro">
+    <h2>Criar Conta</h2>
+   
+    <form id="form-cadastro">
+      <!-- Campo de E-mail (O Ajudante) -->
+      <div class="grupo-campo">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" placeholder="seuemail@exemplo.com" required>
+        <small class="mensagem-ajuda" id="ajuda-email"></small>
+      </div>
 
+      <!-- Campo de Senha (O Fiscal) -->
+      <div class="grupo-campo">
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" placeholder="Digite sua senha" required>
+       
+        <!-- Requisitos da Senha -->
+        <ul class="lista-requisitos">
+          <li id="req-tamanho" class="invalido">Pelo menos 8 caracteres</li>
+          <li id="req-maiuscula" class="invalido">Pelo menos uma letra maiúscula</li>
+          <li id="req-numero" class="invalido">Pelo menos um número</li>
+        </ul>
+      </div>
+
+      <button type="submit" id="btn-cadastrar">Cadastrar</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

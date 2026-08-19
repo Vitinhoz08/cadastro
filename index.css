@@ -1,29 +1,108 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 body {
-    background-color: rgb(48, 48, 48);
+  background-color: #313131;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#card {
-    background-color: aliceblue;
-    width: 70%;
-    margin: 0 auto;
-    text-align: center;
+.card-cadastro {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  border: 2px solid #27ae60;
 }
 
-#dados {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    margin-left: 100px;
+.card-cadastro h2 {
+  margin-bottom: 20px;
+  color: #333333;
+  text-align: center;
 }
 
-input {
-    padding: 20px;
-    border-radius: 5px;
-    width: 70%;
+.grupo-campo {
+  margin-bottom: 20px;
 }
 
-#botão {
-    background-color: rgb(8, 244, 0);
-    color: beige;
-    font-size: x-large;
+.grupo-campo label {
+  display: block;
+  margin-bottom: 6px;
+  color: #555555;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.grupo-campo input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #dddddd;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.grupo-campo input:focus {
+  border-color: #27ae60;
+}
+
+.mensagem-ajuda {
+  display: block;
+  margin-top: 5px;
+  font-size: 12px;
+  color: #27ae60;
+}
+
+/* Regras de validação visual */
+.lista-requisitos {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.lista-requisitos li {
+  font-size: 13px;
+  margin-bottom: 4px;
+  transition: color 0.3s;
+}
+
+.lista-requisitos li.invalido {
+  color: #e74c3c;
+}
+
+.lista-requisitos li.invalido::before {
+  content: "✖ ";
+}
+
+.lista-requisitos li.valido {
+  color: #27ae60;
+}
+
+.lista-requisitos li.valido::before {
+  content: "✔ ";
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #9bfe07;
 }
